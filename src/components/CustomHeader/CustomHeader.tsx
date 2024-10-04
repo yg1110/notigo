@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { NativeStackNavigationProp } from 'react-native-screens/lib/typescript/native-stack/types';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { StackParamList } from '../../navigation/AppNavigation';
 import styles from './CustomHeader.styles';
@@ -22,7 +23,7 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({ title, navigation }) => {
     <View style={styles.container}>
       {hasPrevPage && (
         <TouchableOpacity onPress={goBack}>
-          <Text>Back</Text>
+          <Icon style={styles.backButton} name="arrow-back" />
         </TouchableOpacity>
       )}
       <Text numberOfLines={1} style={styles.title}>
